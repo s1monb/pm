@@ -10,7 +10,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/s1monb/proj-mgmt/helpers"
+	"github.com/s1monb/pm/helpers"
 
 	"github.com/fatih/color"
 	"github.com/manifoldco/promptui"

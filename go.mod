@@ -1,4 +1,4 @@
-module github.com/s1monb/proj-mgmt
+module github.com/s1monb/pm
 
 go 1.22.3
 

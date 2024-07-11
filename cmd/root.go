@@ -7,23 +7,17 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/s1monb/proj-mgmt/project"
+	"github.com/s1monb/pm/project"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "proj-mgmt",
+	Use:   "pm",
 	Short: "A project management tool",
 }
 
-var projectCmd = &cobra.Command{
-	Use:     "project",
-	Short:   "Manage projects",
-	Aliases: []string{"p"},
-}
-
-var projectListCmd = &cobra.Command{
+var listCmd = &cobra.Command{
 	Use:     "list",
 	Short:   "List all projects",
 	Aliases: []string{"ls"},
@@ -32,7 +26,7 @@ var projectListCmd = &cobra.Command{
 	},
 }
 
-var projectNewCmd = &cobra.Command{
+var newCmd = &cobra.Command{
 	Use:     "new",
 	Short:   "Create a new project",
 	Aliases: []string{"n"},
@@ -54,9 +48,8 @@ func init() {
 	initConfigFile()
 
 	// PROJECT-COMMANDS
-	rootCmd.AddCommand(projectCmd)
-	projectCmd.AddCommand(projectListCmd)
-	projectCmd.AddCommand(projectNewCmd)
+	rootCmd.AddCommand(listCmd)
+	rootCmd.AddCommand(newCmd)
 }
 
 func initConfigFile() {
