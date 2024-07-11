@@ -10,8 +10,10 @@ import (
 	"text/tabwriter"
 )
 
+// PrintTable prints a well-formatted table to the console
+// it takes a 2D slice of strings as input
 func PrintTable(table [][]string) {
-	writer := tabwriter.NewWriter(os.Stdout, 0, 8, 0, '\t', 0)
+	writer := tabwriter.NewWriter(os.Stdout, 32, 4, 0, ' ', 0)
 	for _, line := range table {
 		fmt.Fprintln(writer, strings.Join(line, "\t")+"\t")
 	}
