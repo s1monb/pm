@@ -13,9 +13,8 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:     "proj-mgmt",
-	Aliases: []string{"pm"},
-	Short:   "A brief description of your application",
+	Use:   "proj-mgmt",
+	Short: "A project management tool",
 }
 
 var projectCmd = &cobra.Command{
